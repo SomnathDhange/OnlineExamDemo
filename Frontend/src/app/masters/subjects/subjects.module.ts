@@ -6,8 +6,7 @@ import { SubjectComponent } from './subject.component';
 import { SubjectListComponent } from './components/subject-list/subject-list.component';
 import { MaterialModule } from 'src/app/material-module';
 import { SubjectAddEditComponent } from './components/subject-add-edit/subject-add-edit.component';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';  
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -16,7 +15,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     SubjectsRoutingModule,
     MaterialModule,
-    ReactiveFormsModule, FlexLayoutModule
+    ReactiveFormsModule, 
+    FlexLayoutModule
+  ],
+  exports:[
+
   ]
 })
 export class SubjectsModule { }

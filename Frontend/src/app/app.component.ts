@@ -22,7 +22,7 @@ export class AppComponent {
     {
       menuIcon: "description",
       title: "Chapter",
-      path: "/order"
+      path: "/setup/chapter/list"
     },
     {
       menuIcon: "account_circle",

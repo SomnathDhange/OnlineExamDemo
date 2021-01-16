@@ -1,20 +1,33 @@
 <div>
-  <h2>Subjects Add</h2>
+  <div fxLayout>
+    <div fxFlex="80%">
+      <h2>Subjects Add</h2>
+    </div>
+    <div fxFlex="20%"  fxLayoutAlign="flex-end"> 
+      <a routerLink="/setup/subject/list" mat-mini-fab class="back-btn" color="primary">  <mat-icon class="material-icons-outlined">reply</mat-icon></a>
+    </div>
+  </div>
   <form [formGroup]="subjectForm">
-
     <mat-card class="page-card full-mat-card mat-elevation-z5 ">
-      <mat-card-content class="h-100per">
-        <div class="container" fxLayout fxLayout.xs="column" fxLayoutGap="10px" fxLayoutGap.xs="0">
-          <div class="item item-4" fxFlex="200px">
-            Item 4
-          </div>
-          <div class="item item-5" fxFlex="200px">
-            Item 5
+      <mat-card-content>
+        <div fxLayout fxLayout.xs="column" fxLayoutGap.xs="0">
+          <div fxFlex="30%">
+            <mat-form-field class="w-100">
+              <mat-label>Name</mat-label>
+              <input formControlName="name" matInput type="text" />
+              <mat-error *ngIf="f.name.errors">
+                <span *ngIf="f.name.errors.required">please enter name</span>
+              </mat-error>
+            </mat-form-field>
           </div>
         </div>
-        <div> 
-      </div>
       </mat-card-content>
+      <mat-card-actions>
+        <div class="mat-card-inner">
+          <button type="submit" mat-flat-button color="primary"> Save</button>
+          <button type="button" mat-stroked-button color="primary"> Cancel</button>
+        </div>
+      </mat-card-actions>
     </mat-card>
   </form>
 </div>

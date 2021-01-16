@@ -34,6 +34,19 @@ body {
     .mat-card-content {
         margin-top: 20px;
     }
+    .mat-card-actions {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        left: 0;
+        margin: 0 !important;
+        .mat-card-inner {
+            padding: 10px 16px;
+            border-top: 1px solid #b7b7b7;
+            background-color: #f6f6f6;
+        }
+    }
 }
 .d-flex {
     display: flex;
@@ -67,7 +80,7 @@ body {
     font-weight: 700;
     font-size: 12px;
 }
-.full-mat-card{ 
+.full-mat-card {
     height: calc(100vh - 190px);
 }
 
@@ -80,9 +93,15 @@ body {
     color: #333;
 }
 
-.h-100per{
+.h-100per {
     height: 100%;
 }
 .empty-card img {
     width: 300px;
+}
+.back-btn .mat-button-wrapper{
+    padding: 0 !important;
+    mat-icon{
+        @include mat-icon-size(18px);  
+    }
 }
