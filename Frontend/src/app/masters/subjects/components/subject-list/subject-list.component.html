@@ -1,0 +1,22 @@
+<div>
+  <h2>Subjects</h2>
+  <mat-card class="page-card full-mat-card mat-elevation-z5 ">
+    <mat-card-content class="h-100per">
+      <div *ngIf="subjects.length > 0;else emptyCard">
+        array not empty
+      </div>
+      <ng-template #emptyCard fxLayout="row" fxLayoutAlign="center center">
+        <div class="empty-card">
+          <img src="../assets/images/add-product.png" />
+          <h4>Add and manage your subject</h4>
+          <p>This is where you’ll add subjects and manage your pricing.
+            <br>You can also import and export your subject
+          </p>
+          <div>
+            <a routerLink="/setup/subject/add" mat-flat-button color="primary">Add Subject</a>
+          </div>
+        </div>
+      </ng-template>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+@import "~@angular/material/theming";
+@import "./assets/scss/mat-icon.scss";
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+* {
+    font-family: "Mulish", "Helvetica Neue", sans-serif;
+}
+
+.page-card {
+    .mat-card-header {
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        .mat-card-header-text {
+            margin: 0;
+            width: 100%;
+            .mat-card-title {
+                margin-bottom: 8px;
+                font-size: 18px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .mat-card-content {
+        margin-top: 20px;
+    }
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.w-100 {
+    width: 100%;
+}
+.ml-auto {
+    margin-left: auto !important;
+}
+.md-btn {
+    line-height: 33px !important;
+    min-width: auto !important;
+    padding: 0 10px !important;
+    font-family: "Mulish", "Helvetica Neue", sans-serif;
+    .mat-button-wrapper {
+        .mat-icon {
+            @include mat-icon-size(18px);
+            margin-right: 5px;
+        }
+    }
+}
+.mat-error {
+    color: #f44336;
+    font-weight: 700;
+    font-size: 12px;
+}
+.full-mat-card{ 
+    height: calc(100vh - 190px);
+}
+
+.empty-card {
+    text-align: center;
+}
+.empty-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.h-100per{
+    height: 100%;
+}
+.empty-card img {
+    width: 300px;
+}

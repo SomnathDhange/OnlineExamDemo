@@ -1,0 +1,72 @@
+<form [formGroup]="productForm" (submit)="onSubmit()">
+  <mat-card class="page-card mat-elevation-z2">
+    <mat-card-header>
+      <mat-card-title>Product Add </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="row" fxLayoutGap="25px" fxLayout.xs="column">
+        <div fxFlex="25%">
+          <mat-form-field class="w-100">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput type="text" />
+            <mat-error *ngIf="f.name.errors">
+              <span *ngIf="f.name.errors.required">please enter name</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div fxFlex="25%">
+          <mat-form-field class="w-100">
+            <mat-label>Categories</mat-label>
+            <input formControlName="category" matInput type="text" />
+          </mat-form-field>
+        </div>
+        <div fxFlex="25%">
+          <mat-form-field class="w-100">
+            <mat-label>Tags</mat-label>
+            <input formControlName="tags" matInput type="text" />
+          </mat-form-field>
+        </div>
+        <div fxFlex="25%">
+          <mat-form-field class="w-100">
+            <mat-label>Color</mat-label>
+            <input formControlName="color" matInput type="text" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="25px" fxLayout.xs="column">
+        <div fxFlex="25%">
+          <mat-form-field class="w-100">
+            <mat-label>Original Price</mat-label>
+            <input formControlName="originalPrice" matInput type="text" />
+            <mat-error *ngIf="f.originalPrice.errors">
+              <span *ngIf="f.originalPrice.errors.required">please enter original price</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div fxFlex="25%">
+          <mat-form-field class="w-100">
+            <mat-label>Discount Per.</mat-label>
+            <input formControlName="discountPer" matInput type="text" />
+          </mat-form-field>
+        </div>
+        <div fxFlex="25%">
+          <mat-form-field class="w-100">
+            <mat-label>Discount Price</mat-label>
+            <input formControlName="discountPrice" matInput type="text" />
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="25%">
+          <div style="margin: 15px 0;">
+            <mat-checkbox formControlName="isVisiable" class="example-margin">Is Visible</mat-checkbox>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" mat-raised-button color="primary">Save</button>
+      <button type="button" (click)="cancelHandler()" mat-stroked-button color="accent">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+
+</form>

@@ -1,0 +1,49 @@
+@import "../assets/scss/mat-icon.scss";@import '~@angular/material/theming';
+.main-section {
+  height: 100vh;
+
+  .main-navbar {
+    background-color: #fff;
+  }
+  .side-nav-section {
+    height: 100%;
+    overflow: auto;
+    margin-left: 270px;
+  }
+
+  .sidenav-menu {
+    width: 270px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.35);
+    background-color: #2d323e;
+    color: #fff;
+    border: 0;
+
+    .side-navigation {
+      background-color: #1e2129;
+      color: #fff;
+      .side-nav-toolbar {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    .mat-list-item {
+      color: #fff;
+      mat-icon {
+        margin-right: 16px;
+        padding: 0;
+        @include mat-icon-size(16px);
+      }
+    }
+  }
+  .main-content {
+    padding: 20px;
+  }
+}
+.page-title{
+  
+  font-weight: 700;
+  font-size: 25px;
+}

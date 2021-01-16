@@ -1,0 +1,68 @@
+<div>
+  <h2>Customer Add</h2>
+  <mat-card class="page-card full-mat-card mat-elevation-z2">
+    <form [formGroup]="customerFormGroup" (submit)="onSubmit()">
+      <mat-card-content>
+        <div fxLayout="row" fxLayoutGap="25px" fxLayout.xs="column">
+          <div fxFlex="25%">
+            <mat-form-field class="w-100">
+              <mat-label>First Name</mat-label>
+              <input matInput type="text" />
+              <mat-error>
+                <span>please enter first name</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxFlex="25%">
+            <mat-form-field class="w-100">
+              <mat-label>Last Name</mat-label>
+              <input matInput type="text" />
+              <mat-error>
+                <span>please enter last name</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxFlex="25%">
+            <mat-form-field class="w-100">
+              <mat-label>Email</mat-label>
+              <input matInput type="text" />
+              <mat-error>
+                <span>please enter e-mail</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxFlex="25%">
+            <mat-form-field class="w-100">
+              <mat-label>Phone No</mat-label>
+              <input matInput type="text" />
+              <mat-error>
+                <span>please enter phone no</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="25px" fxLayout.xs="column">
+          <div fxFlex="25%">
+            <div class="input-section">
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button color="primary" value="male">Male</mat-radio-button>
+                <mat-radio-button color="primary" value="female">Female</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+          <div fxFlex="30%">
+            <div class="input-section">
+              <mat-checkbox color="primary">Customer agreed to receive marketing emails.</mat-checkbox>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="">
+        <button mat-flat-button color="primary" type="submit">Save</button>
+        <button mat-stroked-button color="primary">Cancel</button>
+      </mat-card-actions>
+    </form>
+
+  </mat-card>
+</div>
