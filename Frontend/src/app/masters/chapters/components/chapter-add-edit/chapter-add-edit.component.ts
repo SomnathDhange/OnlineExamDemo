@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-chapter-add-edit',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChapterAddEditComponent implements OnInit {
 
-  constructor() { }
+  chapterForm: FormGroup;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.chapterForm = this.fb.group({
+      name: new FormControl('', [Validators.required]),
+      subject: new FormControl('', [Validators.required])
+    })
+  }
+  get f() {
+    return this.chapterForm.controls;
   }
 
 }

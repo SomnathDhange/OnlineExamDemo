@@ -6,6 +6,7 @@ import { ChapterComponent } from './chapter.component';
 import { ChapterRoutingModule } from './Chapter-routing.module';
 import { MaterialModule } from 'src/app/material-module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [ChapterComponent, ChapterListComponent, ChapterAddEditComponent],
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ChapterRoutingModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ]
 })
 export class ChaptersModule { }

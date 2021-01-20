@@ -1,1 +1,44 @@
-<p>chapter-add-edit works!</p>
+<div>
+  <div fxLayout>
+    <div fxFlex="80%">
+      <h2>Chapters Add</h2>
+    </div>
+    <div fxFlex="20%" fxLayoutAlign="flex-end">
+      <a routerLink="/setup/chapter/list" mat-mini-fab class="back-btn" color="primary">
+        <mat-icon class="material-icons-outlined">reply</mat-icon>
+      </a>
+    </div>
+  </div>
+  <form [formGroup]="chapterForm">
+    <mat-card class="page-card full-mat-card mat-elevation-z5 ">
+      <mat-card-content>
+        <div fxLayout fxLayoutGap="15px" fxLayout.xs="column" fxLayoutGap.xs="0">
+          <div fxFlex="30%">
+            <mat-form-field class="w-100">
+              <mat-label>Name</mat-label>
+              <input formControlName="name" matInput type="text" />
+              <mat-error *ngIf="f.name.errors">
+                <span *ngIf="f.name.errors.required">please enter name</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxFlex="30%" >
+            <mat-form-field class="w-100">
+              <mat-label>Subject</mat-label>
+              <input formControlName="subject" matInput type="text" />
+              <mat-error *ngIf="f.subject.errors">
+                <span *ngIf="f.subject.errors.required">please enter subject</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="mat-card-inner">
+          <button type="submit" mat-flat-button color="primary"> Save</button>
+          <a routerLink="/setup/chapter/list"  mat-stroked-button color="primary"> Cancel</a>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

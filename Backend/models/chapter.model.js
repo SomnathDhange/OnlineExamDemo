@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
-const subjectSchema = require('../models/subject.model');
-const { func } = require('joi');
+const subjectSchema = require('../models/subject.model'); 
 
-const ChapterSchema = mongoose.Schema({
+const ChapterSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -15,7 +14,7 @@ const ChapterSchema = mongoose.Schema({
         required: true,
     }
 });
-
+ 
 function chapterValidate(body, isUpdate = false) {
     let chapterSchema;
     if (isUpdate) {

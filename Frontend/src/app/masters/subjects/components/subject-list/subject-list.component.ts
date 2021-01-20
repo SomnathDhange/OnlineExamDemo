@@ -22,7 +22,5 @@ export class SubjectListComponent implements OnInit {
       this.subjects = subjects;
       console.log(subjects);
     });
-  }
-
-
+  } 
 }

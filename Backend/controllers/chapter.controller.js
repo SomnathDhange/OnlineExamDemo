@@ -1,4 +1,4 @@
-const { Chapter, validate, validateUpdate } = require('../models/chapter.model');
+const { Chapter, validate } = require('../models/chapter.model');
 const { Subject } = require('../models/subject.model');
 const ObjectId = require('mongoose').Types.ObjectId;
 
@@ -38,12 +38,12 @@ exports.create = async (req, res) => {
     const chapterSave = new Chapter({
         name: req.body.name,
         subject: {
-            _id: subject._id, 
+            _id: subject._id,
         }
     });
 
     const chapter = await chapterSave.save();
-    res.status(200).send(chapter);
+    return res.status(200).send(chapter);
 }
 
 exports.update = async (req, res) => {
@@ -75,7 +75,7 @@ exports.update = async (req, res) => {
         chapter_update = {
             name: req.body.name,
             subject: {
-                _id: subject._id 
+                _id: subject._id
             }
         };
 

@@ -25,6 +25,12 @@ export class AppComponent {
       path: "/setup/chapter/list"
     },
     {
+      menuIcon: "topic",
+      title: "Topic", 
+      path: "/setup/topic/list"
+    },
+
+    {
       menuIcon: "account_circle",
       title: "Customer",
       path: "/customer"
