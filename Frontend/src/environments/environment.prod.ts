@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://localhost:3000/api/'
+  baseUrl: 'https://infinite-shelf-28661.herokuapp.com/api/'
 };
